@@ -52,7 +52,6 @@ const AddFirm = () => {
           method:"POST",
           headers:{
             "token":`${getToken}`,
-
           },
           body:formData
         });
@@ -72,9 +71,13 @@ const AddFirm = () => {
         }else{
           alert("failed to add firm")
         }
-        console.log("this is the new firm id",data.firmId)
+        
         const firmId=data.firmId
-        localStorage.setItem('firmId',firmId)
+        const vendorRestuarant = data.vendorFirmName
+
+          localStorage.setItem('firmId', firmId);
+          localStorage.setItem('firmName', vendorRestuarant)
+          window.location.reload()
       } catch (error) {
         console.log(error,'failed to fetch')
       }
