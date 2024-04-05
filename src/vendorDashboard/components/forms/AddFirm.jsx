@@ -73,7 +73,7 @@ const AddFirm = () => {
         }
         
         const firmId=data.firmId
-        const vendorRestuarant = data.vendorFirmName
+        const vendorRestuarant = data.vendor.FirmName
 
           localStorage.setItem('firmId', firmId);
           localStorage.setItem('firmName', vendorRestuarant)
