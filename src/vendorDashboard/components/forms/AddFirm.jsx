@@ -57,7 +57,7 @@ const AddFirm = () => {
         });
         const data=await response.json()
         if(response.ok){
-          console.log(data)
+          console.log("this is the ",data)
           
           setfirmName("")
           setArea("")
@@ -73,7 +73,9 @@ const AddFirm = () => {
         }
         
         const firmId=data.firmId
-        const vendorRestuarant = data.vendor.FirmName
+        console.log('dfgdgdfgdfgfg',data)
+        console.log(firmId)
+        const vendorRestuarant = data.vendor.firmName
 
           localStorage.setItem('firmId', firmId);
           localStorage.setItem('firmName', vendorRestuarant)
